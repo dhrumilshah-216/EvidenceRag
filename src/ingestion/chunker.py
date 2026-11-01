@@ -23,7 +23,10 @@ def get_tokenizer(model_name: str = "sentence-transformers/all-MiniLM-L6-v2") ->
             "Please install it using 'pip install transformers'."
         ) from exc
 
-    return AutoTokenizer.from_pretrained(model_name)
+    try:
+        return AutoTokenizer.from_pretrained(model_name, local_files_only=True)
+    except Exception:
+        return AutoTokenizer.from_pretrained(model_name)
 
 
 def chunk_document(
