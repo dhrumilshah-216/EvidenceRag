@@ -22,5 +22,6 @@ __pycache__/
 Thumbs.db
 
 data/documents/
+data/
 
 manual_test.py
