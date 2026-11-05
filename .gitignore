@@ -23,5 +23,8 @@ Thumbs.db
 
 data/documents/
 data/
-
+indexes/*
+/indexes/
+indexes/index.faiss
+indexes/metadata.json
 manual_test.py
